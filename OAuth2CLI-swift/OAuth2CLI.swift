@@ -240,11 +240,10 @@ struct OAuth2CLI: AsyncParsableCommand {
         commandName: "oauth-token",
         abstract: "Obtains and prints a valid OAuth2 access token",
         discussion: """
-            This script obtains and prints a valid OAuth2 access token. State is maintained in an
-            encrypted TOKENFILE. Run with "--verbose --authorize" to get started or whenever all
-            tokens have expired, optionally with "--authflow" to override the default authorization
-            flow. To truly start over from scratch, first delete TOKENFILE. Use "--verbose --test"
-            to test the IMAP/POP/SMTP endpoints.
+            This script obtains and prints a valid OAuth2 access token. State is maintained in 
+            Apple Keychain. Run with "--verbose --authorize" to get started or whenever all tokens 
+            have expired, optionally with "--authflow" to override the default authorization
+            flow. To truly start over from scratch, first delete token in the Keychain.
             """
     )
     
